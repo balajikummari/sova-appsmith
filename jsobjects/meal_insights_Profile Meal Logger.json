@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "meal_insights",
+    "pageId": "Profile Meal Logger",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetCarbohydrateSum: (tab) => {\n\t\t  let carbohydrateSum = 0;\n\t\t\tconst mealData = tab == 'all' ? getMeal_Insights_of_the_Day.data : getMeal_Insights_of_the_Day.data.filter((obj) => obj.mealType === tab)\n\t\t  _.forEach(mealData, function(meal) {\n  \t\tcarbohydrateSum = carbohydrateSum + parseFloat(meal.carbohydrate)\n\t\t\t});\n\t\treturn carbohydrateSum.toFixed(1);\n\t}\n}",
+    "variables": []
+  },
+  "id": "Profile Meal Logger_meal_insights",
+  "deleted": false,
+  "gitSyncId": "6248031834d31c785ae939de_6248506434d31c785ae939fd"
+}

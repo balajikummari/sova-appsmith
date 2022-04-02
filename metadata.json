@@ -5,7 +5,7 @@
   "publishedDefaultPageName": "Profile Meal Logger",
   "unpublishedDefaultPageName": "Profile Meal Logger",
   "invisibleActionFields": {
-    "Profile Meal Logger_myFun1": {
+    "Profile Meal Logger_getCarbohydrateSum": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
