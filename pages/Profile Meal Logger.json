@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 912,
+          "rightColumn": 976,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -95,10 +95,10 @@
                       ],
                       "isVisibleDownload": true,
                       "compactMode": "DEFAULT",
-                      "topRow": 10,
-                      "bottomRow": 41,
+                      "topRow": 11,
+                      "bottomRow": 42,
                       "parentRowSpace": 10,
-                      "onPageChange": "{{SelectQuery.run()}}",
+                      "onPageChange": "{{\nSelectQuery.run()\ngetMeal_Insights_of_the_Day.clear()\n}}",
                       "isSortable": true,
                       "type": "TABLE_WIDGET",
                       "defaultSelectedRow": "1",
@@ -327,7 +327,7 @@
                           "id": "created_at",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "date",
                           "textSize": "PARAGRAPH",
                           "fontStyle": "",
                           "enableFilter": true,
@@ -337,7 +337,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "created_at",
-                          "computedValue": "{{Profiles_Table.sanitizedTableData.map((currentRow) => ( currentRow.created_at))}}"
+                          "computedValue": "{{Profiles_Table.sanitizedTableData.map((currentRow) => ( currentRow.created_at))}}",
+                          "inputFormat": "YYYY-MM-DDTHH:mm:ss",
+                          "outputFormat": "DD-MM-YYYY"
                         },
                         "updated_at": {
                           "index": 10,
@@ -345,7 +347,7 @@
                           "id": "updated_at",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "date",
                           "textSize": "PARAGRAPH",
                           "fontStyle": "",
                           "enableFilter": true,
@@ -355,7 +357,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "updated_at",
-                          "computedValue": "{{Profiles_Table.sanitizedTableData.map((currentRow) => ( currentRow.updated_at))}}"
+                          "computedValue": "{{Profiles_Table.sanitizedTableData.map((currentRow) => ( currentRow.updated_at))}}",
+                          "inputFormat": "YYYY-MM-DDTHH:mm:ss",
+                          "outputFormat": "DD-MM-YYYY"
                         }
                       },
                       "delimiter": ",",
@@ -1768,6 +1772,7 @@
                               "widgetName": "Container2",
                               "borderColor": "#F6F7F8",
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 0,
@@ -3102,7 +3107,7 @@
                       "parentId": "1cyhhdom9k",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "fontSize": "HEADING3"
                     }
                   ],
                   "key": "jsrbi8p825"
